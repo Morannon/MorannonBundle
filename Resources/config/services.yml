@@ -1,0 +1,8 @@
+parameters:
+    morannon.gateway.abstract.class: Morannon\Gateway\AbstractGateway
+    morannon.gateway.nexmo.class: Morannon\Nexmo\NexmoGateway
+
+services:
+    morannon.gateway.abstract:
+        class: %morannon.gateway.abstract.class%
+        abstract: true
