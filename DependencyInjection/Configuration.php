@@ -21,8 +21,19 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('morannon');
 
         $rootNode
+            ->fixXmlConfig('morannon')
             ->children()
-                ->arrayNode('gateways')->defaultValue(array())->end()
+                ->arrayNode('gateways')
+                    ->isRequired()
+                    ->requiresAtLeastOneElement()
+                    ->useAttributeAsKey('name')
+                    ->prototype('array')
+                        ->children()
+                            ->scalarNode('client_id')->cannotBeEmpty()->end()
+                            ->scalarNode('client_secret')->cannotBeEmpty()->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
 
 
