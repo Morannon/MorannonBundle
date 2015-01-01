@@ -16,6 +16,6 @@
     "minimum-stability": "stable",
     "require": {
         "symfony/symfony": ">=2.6",
-        "apinnecke/morannon": "0.0.*"
+        "apinnecke/morannon": "~0.1"
     }
 }
