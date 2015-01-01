@@ -25,17 +25,16 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('gateways')
                     ->isRequired()
-                    ->requiresAtLeastOneElement()
                     ->useAttributeAsKey('name')
                     ->prototype('array')
                         ->children()
-                            ->scalarNode('client_id')->cannotBeEmpty()->end()
-                            ->scalarNode('client_secret')->cannotBeEmpty()->end()
+                            ->scalarNode('api_base_url')->cannotBeEmpty()->end()
+                            ->scalarNode('api_user')->cannotBeEmpty()->end()
+                            ->scalarNode('api_token')->cannotBeEmpty()->end()
                         ->end()
                     ->end()
                 ->end()
             ->end();
-
 
         return $treeBuilder;
     }
