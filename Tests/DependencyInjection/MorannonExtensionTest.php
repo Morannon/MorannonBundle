@@ -67,5 +67,4 @@ class MorannonExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($parameters->has('morannon.gateways.whatever_mobile.api_user'));
         $this->assertTrue($parameters->has('morannon.gateways.whatever_mobile.api_token'));
     }
-
 }
