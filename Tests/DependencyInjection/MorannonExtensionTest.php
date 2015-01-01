@@ -45,7 +45,7 @@ class MorannonExtensionTest extends \PHPUnit_Framework_TestCase
         $this->extension->load($this->config, $this->containerBuilder);
 
         $definitions = $this->containerBuilder->getDefinitions();
-        $this->assertEquals(6, count($definitions));
+        $this->assertEquals(5, count($definitions));
 
         $this->assertTrue($this->containerBuilder->hasDefinition('morannon.gateways.nexmo'));
         $this->assertTrue($this->containerBuilder->hasDefinition('morannon.gateways.whatever_mobile'));
