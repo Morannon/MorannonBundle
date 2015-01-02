@@ -15,7 +15,7 @@
     },
     "target-dir": "Morannon/Bundle/MorannonBundle",
     "require": {
-        "symfony/symfony": ">=2.6",
+        "symfony/framework-bundle": "~2.3",
         "morannon/morannon": "~0.1"
     },
     "require-dev": {
