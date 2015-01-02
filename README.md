@@ -1,9 +1,9 @@
 # SMS Gateway for Symfony 2
 
 
-[![Build Status](https://api.travis-ci.org/apinnecke/MorannonBundle.png?branch=master)](https://travis-ci.org/APinneckeMorannon)
-[![Latest Stable Version](https://poser.pugx.org/apinnecke/morannon-bundle/v/stable.png)](https://packagist.org/packages/apinnecke/morannon-bundle)
-[![Total Downloads](https://poser.pugx.org/apinnecke/morannon-bundle/downloads.png)](https://packagist.org/packages/apinnecke/morannon-bundle)
+[![Build Status](https://travis-ci.org/Morannon/MorannonBundle.svg?branch=master)](https://travis-ci.org/Morannon/MorannonBundle)
+[![Latest Stable Version](https://poser.pugx.org/morannon/morannon-bundle/v/stable.png)](https://packagist.org/packages/morannon/morannon-bundle)
+[![Total Downloads](https://poser.pugx.org/morannon/morannon-bundle/downloads.png)](https://packagist.org/packages/morannon/morannon-bundle)
 
 ---
  
@@ -27,14 +27,14 @@ Add morannon-bundle to your composer.json file:
 
 ```json
 "require": {
-  "apinnecke/morannon-bundle": "~0.1"
+  "morannon/morannon-bundle": "~0.1"
 }
 ```
 
 Use composer to install this package.
 
 ```
-$ composer update apinnecke/morannon-bundle
+$ composer update morannon/morannon-bundle
 ```
 
 ### Registering the Bundle
