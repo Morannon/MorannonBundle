@@ -14,7 +14,6 @@
         }
     },
     "target-dir": "Morannon/Bundle/MorannonBundle",
-    "minimum-stability": "stable",
     "require": {
         "symfony/symfony": ">=2.6",
         "morannon/morannon": "~0.1"
