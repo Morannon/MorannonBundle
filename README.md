@@ -12,8 +12,6 @@
 - [Registering the Bundle](#registering-the-bundle)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Basic usage](#basic-usage)
-- [More usage examples](#more-usage-examples)
 
 ## Supported services
 
@@ -44,7 +42,7 @@ $ composer update apinnecke/morannon-bundle
 Register the bundle in your ```app/AppKernel.php```:
 
 ```php
-    new Morannon\Bundle\MorannonBundle\MorannonBundle(),
+    new \Morannon\Bundle\MorannonBundle\MorannonBundle(),
 ```
 
 ## Configuration
@@ -61,7 +59,8 @@ morannon:
 ```
 
 
-Nexmo is used as an example here. Replace it with whatever your want. Now add all the resource owners you need, the services are created automatically.
+Nexmo is used as an example here. Replace it with whatever your want.
+Now add all the resource owners you need, the services are created automatically.
 
 # Services
 
@@ -79,3 +78,16 @@ or inject it into another service:
         arguments:
             - @morannon.gateways.nexmo
 ```
+
+# Usage
+
+For type hinting the service use the `\Morannon\Base\Gateway\GatewayInterface` interface, which provides the `sendSMS` method.
+This interface can also be used as type hinting in method and constructor signatures.
+
+## sending a sms
+
+The `sendSMS` method expects an instance of the `Morannon\Base\SMS\SMSInterface` interface.
+If you du not need any special magic, you could easily use the `Morannon\Base\SMS\BaseSMS` implementation.
+
+It returns an instance of `Morannon\Base\Response\SentResponseInterface` interface which provides information about
+the sent sms (e.g. getSentMessagesCount(), getMessageId()).
