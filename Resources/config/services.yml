@@ -2,6 +2,7 @@ parameters:
     morannon.http_client.class: Guzzle\Http\Client
     morannon.utils.url.class: Morannon\Base\Utils\UrlUtils
     morannon.gateways.abstract.class: Morannon\Base\Gateway\AbstractGateway
+    morannon.gateways.noop.class: Morannon\Base\Gateway\NoopGateway
     morannon.gateways.nexmo.class: Morannon\Nexmo\NexmoGateway
     morannon.gateways.whatever_mobile.class: Morannon\WhateverMobile\WhateverMobileGateway
 
@@ -18,3 +19,7 @@ services:
         calls:
             - [ setHttpClient, [@morannon.http_client] ]
             - [ setUrlUtils, [@morannon.utils.url] ]
+
+    morannon.gateways.noop:
+        class: %morannon.gateways.noop.class%
+        parent: @morannon.gateways.abstract
