@@ -22,4 +22,4 @@ services:
 
     morannon.gateways.noop:
         class: %morannon.gateways.noop.class%
-        parent: @morannon.gateways.abstract
+        parent: morannon.gateways.abstract
